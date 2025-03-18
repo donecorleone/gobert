@@ -1,0 +1,202 @@
+---
+import { urlFor } from "../utils/image";
+import { getGalerie} from "../utils/sanity";
+import { getGalerieByTitle} from "../utils/sanity";
+
+
+// const galerieData = await getGalerie();
+const galerieData = await getGalerieByTitle("Damen");
+
+---
+<div class="flex flex-col justify-center items-center gap-5 text-center px-[30px] pb-[30px] mt-[100px]" id="kundenservice">
+  <h2 class="font-light text-[32px]">DAMENKOLLEKTIONEN.</h2>
+  <p class="lg:max-w-[800px] font-extralight text-black mb-[30px] text-[18px]">Lässige, feminine Styles mit Kombinationen aus Trend- und Basisteilen, die sich perfekt in Ihre Garderobe integrieren lassen, damit Sie jeden Tag ein neues Lieblingsoutfit tragen.<br /><b>Outdoor – Business – Casual – Homewear</b><br />Wir stehen für Freude an Fashion, denn wer sich gefällt und wohlfühlt, strahlt das auch aus.</p>
+</div>
+
+
+<div class="container max-w-[1400px] h-fit mx-auto px-[30px] lg:px-0">
+    <div class="grid-container gap-[33px]">
+        <div class="img-box1 bg-slate-200">
+            {galerieData.galerieImage && (
+                <img src={urlFor(galerieData.galerieImage).url()} alt="logo 1" width="350" height="350" decoding="async" loading="lazy" />
+              )}
+        </div>
+        <div class="img-box2 bg-slate-300">
+            {galerieData.galerieImage2 && (
+            <img src={urlFor(galerieData.galerieImage2).url()} alt="logo 1" width="350" height="350" decoding="async" loading="lazy" />
+          )}
+        </div>
+        <div class="img-box3 bg-slate-400">
+            {galerieData.galerieImage3 && (
+            <img src={urlFor(galerieData.galerieImage3).url()} alt="logo 1" width="350" height="350" decoding="async" loading="lazy" />
+          )}
+        </div>
+        <div class="img-box4 bg-slate-500">
+            {galerieData.galerieImage4 && (
+            <img src={urlFor(galerieData.galerieImage4).url()} alt="logo 1" width="350" height="350" decoding="async" loading="lazy" />
+          )}
+        </div>
+        <div class="img-box5 bg-slate-600">
+            {galerieData.galerieImage5 && (
+            <img src={urlFor(galerieData.galerieImage5).url()} alt="logo 1" width="350" height="350" decoding="async" loading="lazy" />
+          )}
+        </div>
+        <div class="img-box6 bg-slate-700">
+            {galerieData.galerieImage6 && (
+            <img src={urlFor(galerieData.galerieImage6).url()} alt="logo 1" width="350" height="350" decoding="async" loading="lazy" />
+          )}
+        </div>
+        <div class="img-box7 bg-slate-800">
+            {galerieData.galerieImage7 && (
+            <img src={urlFor(galerieData.galerieImage7).url()} alt="logo 1" width="350" height="350" decoding="async" loading="lazy" />
+          )}
+        </div>
+        <div class="img-box8 bg-slate-900">
+            {galerieData.galerieImage8 && (
+                <img src={urlFor(galerieData.galerieImage8).url()} alt="logo 1" width="350" height="350" decoding="async" loading="lazy" />
+              )}
+        </div>
+        <div class="img-box9 bg-red-100">
+            {galerieData.galerieImage9 && (
+                <img src={urlFor(galerieData.galerieImage9).url()} alt="logo 1" width="350" height="350" decoding="async" loading="lazy" />
+              )}
+        </div>
+        <div class="img-box10 bg-red-200">
+            {galerieData.galerieImage10 && (
+                <img src={urlFor(galerieData.galerieImage10).url()} alt="logo 1" width="350" height="350" decoding="async" loading="lazy" />
+              )}
+        </div>
+        <div class="img-box11 bg-red-300">
+            {galerieData.galerieImage11 && (
+                <img src={urlFor(galerieData.galerieImage11).url()} alt="logo 1" width="350" height="350" decoding="async" loading="lazy" />
+              )}
+        </div>
+        <div class="img-box12 bg-red-400">
+            {galerieData.galerieImage12 && (
+                <img src={urlFor(galerieData.galerieImage12).url()} alt="logo 1" width="350" height="350" decoding="async" loading="lazy" />
+              )}
+        </div>
+        <div class="img-box13 bg-red-500">
+            {galerieData.galerieImage13 && (
+                <img src={urlFor(galerieData.galerieImage13).url()} alt="logo 1" width="350" height="350" decoding="async" loading="lazy" />
+              )}
+        </div>
+        <div class="img-box14 bg-red-600">
+            {galerieData.galerieImage14 && (
+                <img src={urlFor(galerieData.galerieImage14).url()} alt="logo 1" width="350" height="350" decoding="async" loading="lazy" />
+              )}
+        </div>
+    </div>
+</div>
+
+<style is:inline>
+
+    .grid-container {
+        display: grid;
+        grid-template-rows: repeat(5, 325px);
+        grid-template-columns: repeat(4, 325px);
+        grid-template-areas: 
+        "img-box1 img-box2 img-box3 img-box4"
+        "img-box5 img-box6 img-box9 img-box9"
+        "img-box7 img-box8 img-box9 img-box9"
+        "img-box10 img-box10 img-box11 img-box12"
+        "img-box10 img-box10 img-box13 img-box14"
+
+        ;
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        z-index: 10;
+    }
+
+    .grid-container > * {
+        font-size: 32px;
+        font-weight: 600;    
+    }
+
+   .img-box1 {
+    grid-area: img-box1;
+   }
+
+   .img-box2 {
+    grid-area: img-box2;
+   }
+
+   .img-box3 {
+    grid-area: img-box3;
+   }
+
+   .img-box4 {
+    grid-area: img-box4;
+   }
+
+   .img-box5 {
+    grid-area: img-box5;
+   }
+
+   .img-box6 {
+    grid-area: img-box6;
+   }
+
+   .img-box6 {
+    grid-area: img-box6;
+   }
+
+   .img-box7 {
+    grid-area: img-box7;
+   }
+
+   .img-box8 {
+    grid-area: img-box8;
+   }
+
+   .img-box9 {
+    grid-area: img-box9;
+   }
+
+   .img-box10 {
+    grid-area: img-box10;
+   }
+
+   .img-box11 {
+    grid-area: img-box11;
+   }
+
+   .img-box12 {
+    grid-area: img-box12;
+   }
+
+   .img-box13 {
+    grid-area: img-box13;
+   }
+
+   .img-box14 {
+    grid-area: img-box14;
+   } 
+
+   @media (max-width: 990px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "img-box1"
+            "img-box2"
+            "img-box3"
+            "img-box4"
+            "img-box5"
+            "img-box6"
+            "img-box7"
+            "img-box8"
+            "img-box9"
+            "img-box10"
+            "img-box11"
+            "img-box12"
+            "img-box13"
+            "img-box14";
+    }
+}
+</style>

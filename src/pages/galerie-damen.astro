@@ -1,0 +1,36 @@
+---
+import { getIndexPage } from "../utils/sanity";
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Gallery from "../components/Gallery.astro";
+import { Picture } from 'astro:assets';
+import heroImage from "../assets/bento-grid-3.jpg";
+import ContactForm from "../components/ContactForm.astro";
+
+const page = await getIndexPage(); 
+---
+
+<Layout title="Gallerie">
+  <div class="wrapper">
+    <main>
+      <div class="hero-section h-[500px] lg:h-[732px]">
+
+      </div>
+      <Gallery />
+      <ContactForm />
+    </main>
+  </div>
+</Layout>
+
+
+<style>
+    
+      .hero-section {
+        background-image: url("/images/damen-hero.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+      
+</style>

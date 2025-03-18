@@ -1,0 +1,155 @@
+---
+
+import { urlFor } from "../utils/image";
+import { PortableText } from "astro-portabletext";
+
+
+const { section } = Astro.props;
+
+
+
+---
+
+<!-- <div class="info-container w-full py-[130px] grid place-items-center px-[20px] md:px-0">
+    <div class="content-wrapper">
+        
+        <h2>{section.infoHeadline}<span class="md:hidden">{section.infoSubheadline}</span></h2>
+        <div class="logo-text flex flex-col lg:flex-row">
+            {section.infoImageUrl && (
+                <img src={urlFor(section.infoImageUrl).url()} alt={section.infoHeadline || "Info Bild"} height="200" width="200" decoding="async" loading="lazy"/>
+    
+            )}
+            <div class="flex flex-col max-w-[450px] items-start">
+                <h3 class="leading-none pb-5 hidden md:block">{section.infoSubheadline}</h3>
+                {(section.infoBody &&
+                    <div class="post-content">
+                      <PortableText value={section.infoBody} />
+                    </div> || "Mit aktueller, hochwertiger Mode für Sie und Ihn, fachmännischer Beratung und starken Serviceleistungen in einem freundlichen Ambiente kümmert sich das Modehaus Gobert um Ihr persönliches Outfit. Wir haben durchgehend geöffnet und am Samstag bis 16 Uhr für Sie da. Hier finden Sie unsere Öffnungszeiten. Schauen Sie vorbei, wir freuen uns auf Sie! Claudia Merkle & Team"
+                  )}
+            </div>
+        </div>
+        
+    </div>
+</div> -->
+
+
+
+<div class="info-container w-full py-[90px] md:py-[130px]  grid place-items-center px-[20px] md:px-0">
+    <div class="content-wrapper">
+        
+        <h2>{section.infoHeadline}<span class="lg:hidden">{section.infoSubheadline}</span></h2>
+        <div class="logo-text flex flex-col lg:flex-row">
+            {section.infoImageUrl && (
+                <img src={urlFor(section.infoImageUrl).url()} alt={section.infoHeadline || "Info Bild"} height="200" width="200" decoding="async" loading="lazy"/>
+    
+            )}
+            <div class="flex flex-col max-w-[450px] items-start">
+                <h3 class="leading-none pb-5 hidden lg:block">{section.infoSubheadline}</h3>
+                {(section.infoBody &&
+                    <div class="post-content">
+                      <p>
+                        Mode, die Sie das ganze Jahr über begleitet und Ihnen jeden Tag eine Freude macht. Durch die Kompetenz unseres Teams finden wir aus der unendlichen Auswahl der Modewelt genau die Zusammenstellung für Ihre Garderobe, die Ihnen jeden Tag ein Lieblingsoutfit garantiert.<br /> Freuen Sie sich auf Inspiration, Authentizität und perfekten Service. Wir haben durchgehend geöffnet und am Samstag bis 16 Uhr für Sie da. Hier finden Sie unsere <a href="#contact-section">Öffnungszeiten</a>. <br /><br />Schauen Sie vorbei, wir freuen uns auf Sie!<br /><br />Claudia Merkle & Team
+                      </p>
+                    </div>
+                  )}
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<style>
+
+    img {
+        max-width: 200px;
+        height: auto;
+        margin-right: 50px;
+        margin-top: -100px;
+
+    }
+
+    .info-container {
+        width: 50%;
+        display: grid;
+        margin: auto;
+        place-items: center;
+        overflow-x: hidden;
+    }
+    .info-container img {
+        place-self: center;
+        padding-bottom: 50px;
+        padding-top: 20px;
+        width: 400px;
+        height: auto;
+    }
+
+    h2, h3 {
+        font-size: 50px;
+        font-weight: 300;
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: 200;
+        color: rgb(0, 0, 0);
+        padding-top: 20px;
+    }
+
+    p b{
+        color: black;
+        font-weight: 500;
+    }
+
+    a {
+        color: #E74011;
+    }
+
+   
+
+    @media screen and (max-width: 990px) {
+        h2 {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 16px;
+            text-align: center;
+        }
+
+        img {
+            max-width: 150px;
+            margin-right: -5px;
+            margin-top: 20px;
+        }
+
+        .info-container {
+            width: 92%;
+        }
+
+        .info-container img {
+            width: 300px;
+            height: auto;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .logo-text {
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+
+        img {
+            max-width: 92px;
+            margin-top: 30px;
+            margin-right: -5px;
+        }
+
+        }
+
+    
+
+</style>

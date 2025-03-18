@@ -1,0 +1,117 @@
+---
+import { urlFor } from "../utils/image";
+import { getService } from "../utils/sanity";
+import { getImage } from "astro:assets";
+
+const serviceData = await getService();
+
+---
+
+<div class="flex flex-col justify-center items-center gap-5 text-center px-[30px] pb-[30px]" id="kundenservice">
+  <h2>GOBERT MODEHAUS<br /> SERVICE MIT STIL</h2>
+  <p class="lg:max-w-[600px] font-extralight text-black">Unsere Services kommen von Herzen, denn wir wollen, dass das Einkaufen für Sie leicht und unkompliziert ist. Sie können sich voll und ganz auf das Erlebnis für die Sinne konzentrieren – die Farben, Stoffe, Schnitte und die Möglichkeiten, die die Mode für Sie bereithält.</p>
+</div>
+
+<div class="service-section max-w-[1100px] grid mx-auto place-items-center pt-[40px] mb-[100px] gap-4">
+  
+  {serviceData.map((service) => (
+    <div class="service-container">    
+      {service.serviceImage && <img src={urlFor(service.serviceImage).url()} alt={service.title} width="50" height="50" decoding="async" loading="lazy"/>}
+      <h3>{service?.title || "No title provided."}</h3>
+      <p>{service?.description || "No description provided."}</p>
+    </div>
+  ))}
+</div>
+
+<style>
+
+  .service-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: auto; 
+  }
+
+  .service-container {
+    max-width: 300px;
+    min-height: 350px;
+    margin-bottom: 20px;
+    
+  }
+
+  img {
+    max-width: 45px;
+  }
+
+
+h2 {
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+
+
+
+  h3 {
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 10px 0 15px 0;
+  }
+
+  p {
+    font-size: 18px;
+    color: rgb(34, 34, 34);
+    font-weight: 200;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .service-section {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 769px) {
+    .service-section {
+      grid-template-columns: 1fr;
+      padding: 0 30px;
+    }
+
+    .service-container {
+      min-height: fit-content;
+      margin-bottom: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      max-width: 100%;
+
+    }
+
+    h2 {
+      font-size: 30px;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    p {
+      font-size: 16px;
+      text-align: center;
+      padding-bottom: 30px;
+    }
+
+    img {
+      padding-bottom: 20px;
+    }
+  }
+
+
+
+
+
+
+</style>

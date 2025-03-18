@@ -1,0 +1,34 @@
+---
+import { getIndexPage } from "../utils/sanity";
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Info from "../components/Info.astro";
+import Bento from "../components/Bento.astro";
+import LogoSwipes from "../components/LogoSwipes.astro";
+import Feed from "../components/Feed.astro";
+import Service from "../components/Service.astro";
+import Bento2 from "../components/Bento2.astro";
+import ImageContainer from "../components/ImageContainer.astro";
+import ContactForm from "../components/ContactForm.astro";
+import LogoSwipesMobile from "../components/LogoSwipesMobile.astro";
+
+
+const page = await getIndexPage(); 
+---
+
+<Layout title="Startseite">
+  <div class="wrapper">
+    <main>
+      {page.hero && <Hero section={page.hero} />}  
+      {page.info && <Info section={page.info} />} 
+      <Bento />
+      <LogoSwipes /> 
+      <LogoSwipesMobile />
+      <Service />  
+      <Bento2 />
+      <ImageContainer />
+      <Feed /> 
+      <ContactForm />
+    </main>
+  </div>
+</Layout>

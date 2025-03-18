@@ -1,0 +1,126 @@
+---
+import bentoImage1 from "../assets/gobert-modehaus.jpg";
+import bentoImage2 from "../assets/gobert-modehaus-2.jpg";
+import banner2 from "../assets/gobert-modehaus-2.svg";
+
+
+import { Image } from "astro:assets";
+import { getImage } from "astro:assets";
+import { urlFor } from "../utils/image";
+
+const optBentoImage = await getImage({src: bentoImage1, format: 'avif'})
+const optBentoImage2 = await getImage({src: bentoImage2, format: 'avif'})
+
+
+---
+<div class="wrapper lg:mx-[4%]">
+  <div class="container mx-auto max-w-[1400px] gap-5 px-[30px] md:px-[4%] lg:px-0">
+      <!-- Erste Zeile mit Rot & Grün -->
+      <div class="flex flex-col lg:flex-row gap-5 w-full">
+          <!-- Rote Boxen (ca. 55% Breite) -->
+          <div class="flex-auto lg:flex-[53%] flex flex-col justify-center items-center gap-5">
+              <div class="w-full h-[500px] lg:h-[640px] bg-[#DFDBCB] grid place-items-center text-[#E74011]">
+                <div class="w-full p-[30px] md:p-0 md:w-[70%]">
+                <h3 class="mb-[30px] text-[30px] md:text-[50px] uppercase">Persönlicher Unternehmens Bereich Lore</h3>
+                <p class="text-[#E74011] text-[16px] md:text-[18px] font-extralight">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
+            
+          
+              </div>
+              <div class="relative w-full h-[451px] md:h-[800px] lg:h-[998px] bg-cover bg-no-repeat" style={`background-image: url(${optBentoImage.src});`}>
+                <Image src={banner2} alt="gobert banner" class="gobert-banner absolute top-[-80px] lg:top-[-120px] left-1/2 -translate-x-1/2 lg:left-auto lg:right-[30px] lg:translate-x-0 max-w-[78px] md:max-w-[114px]" />
+              </div>
+          </div>
+          <!-- Grüne Boxen (ca. 45% Breite) -->
+          <div class="flex-auto lg:flex-[47%] flex flex-col-reverse lg:flex-col justify-center items-center gap-5">
+              <div class="w-full h-[451px] md:h-[793px] bg-cover bg-no-repeat" style={`background-image: url(${optBentoImage2.src});`}>
+              </div>
+              <div class="herren w-full h-[845px] bg-[#E74011] text-white">
+                  <div class="herren flex w-full h-[725px] bg-[#E74011] text-white lg:p-4">
+                      <div class="grid grid-cols-1 md:grid-cols-2 grid-rows-4 gap-4 h-full lg:p-10">
+                        <div class="text-white p-[30px] lg:p-4">
+                          <h2 class="text-[18px] font-light">WERT LOREM IPSUM</h2>
+                          <p class="text-[14px] mt-2 font-extralight">Lorem ipsum sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        </div>
+                        <div class="text-white p-[30px] lg:p-4">
+                          <h2 class="text-[18px] font-light">WERT LOREM IPSUM</h2>
+                          <p class="text-[14px] mt-2 font-extralight">Lorem ipsum sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        </div>
+                        <div class="text-white p-[30px] lg:p-4">
+                          <h2 class="text-[18px] font-light">WERT LOREM IPSUM</h2>
+                          <p class="text-[14px] mt-2 font-extralight">Lorem ipsum sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        </div>
+                        <div class="text-white p-[30px] lg:p-4">
+                          <h2 class="text-[18px] font-light">WERT LOREM IPSUM</h2>
+                          <p class="text-[14px] mt-2 font-extralight">Lorem ipsum sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        </div>
+                        
+                        <!-- Diese Elemente werden auf Mobile ausgeblendet -->
+                        <div class="text-white p-[30px] lg:p-4 hidden md:block">
+                          <h2 class="text-[18px] font-light">WERT LOREM IPSUM</h2>
+                          <p class="text-[14px] mt-2 font-extralight">Lorem ipsum sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        </div>
+                        <div class="text-white p-[30px] lg:p-4 hidden md:block">
+                          <h2 class="text-[18px] font-light">WERT LOREM IPSUM</h2>
+                          <p class="text-[14px] mt-2 font-extralight">Lorem ipsum sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        </div>
+                        <div class="text-white p-[30px] lg:p-4 hidden md:block">
+                          <h2 class="text-[18px] font-light">WERT LOREM IPSUM</h2>
+                          <p class="text-[14px] mt-2 font-extralight">Lorem ipsum sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        </div>
+                        <div class="text-white p-[30px] lg:p-4 hidden md:block">
+                          <h2 class="text-[18px] font-light">WERT LOREM IPSUM</h2>
+                          <p class="text-[14px] mt-2 font-extralight">Lorem ipsum sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        </div>
+                      </div>
+                  </div>
+                  <img src="/images/gobert-logo-white.svg" class="justify-self-start pl-[30px] md:pl-[30px] md:justify-self-center gobert-logo" width="180" height="auto"/>
+
+                    
+              </div>
+          </div>
+      </div>
+  </div>
+    
+  
+</div>
+
+
+<style>
+.quote-text {
+    text-transform: uppercase;
+    color: #E74011;
+    font-size: 49px;
+    font-weight: 200;
+    line-height: 1;
+    max-width: 70%;
+}
+
+.herren p{
+    color: white;
+}
+
+h3 {
+    line-height: 1.3;
+    font-weight: 300;
+
+}
+
+.gobert-logo {
+  object-fit: contain;
+}
+
+@media screen and (max-width: 769) {
+    h3 {
+        line-height: 1;
+    }
+}
+
+.herren img {
+    width: 182px;
+    height: 64px;
+}
+
+</style>

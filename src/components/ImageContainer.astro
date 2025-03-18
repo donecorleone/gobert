@@ -1,0 +1,70 @@
+---
+import containerImage from "../assets/container-image.jpg";
+import gobertBg from "../assets/gobert_logo_negativ.svg";
+import { getImage } from "astro:assets";
+
+const optContainerImage = await getImage({src: containerImage, format: 'avif'})
+const optGoberBg = await getImage({src: gobertBg})
+
+---
+
+<div class="wrapper lg:mx-[4%]">
+<div class="container mx-auto max-w-[1400px] flex flex-col lg:flex-row my-[150px] px-[30px] md:px-[4%] lg:px-0">
+        <div class="text-container flex-auto lg:w-[45%] h-[400px] md:h-[650px] lg:h-[800px] bg-[#E74010] border border-red-500 grid place-items-center bg-repeat bg-center bg-contain" style={`background-image: url(${optGoberBg.src});`}>
+          
+                    <div class="flex flex-col items-center justify-center px-[30px] md:px-[15%] max-w-full">
+                        <div class="wrapper">
+                            <p class="uppercase text-[36px] text-white tracking-wide">Alle infos zu aktuellen Veranstaltungen und Aktionen</p>
+                            <button class="uppercase italic text-[40px] text-[#C0E0CE] text-left flex items-center">
+                                <a href="" class="mr-3">
+                                    Finden Sie hier
+                                </a>
+                                <img src="/images/arrow-turkis.svg" alt="pfeil tuerkis" height="45" width="45">
+                            </button>
+                        </div>
+                    </div>
+        </div>
+        <div class="image-container flex-auto lg:w-[55%] h-[600px] md:h-[850px] lg:h-[800px]" style={`background-image: url(${optContainerImage.src});`}></div>
+</div>
+</div>
+
+
+<style>
+    .image-container {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    p {
+        line-height: 1.2;
+    }
+
+    a {
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    button {
+        padding: 0;
+        margin: 0;
+    }
+
+    button img {
+        width: 35px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    @media screen and (max-width: 769px) {
+        p, a {
+            font-size: 29px;
+        }
+        
+        .text-container {
+            background-image: none;
+        }
+    }
+
+    
+</style>

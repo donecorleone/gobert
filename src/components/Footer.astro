@@ -1,0 +1,29 @@
+---
+import { getFooter } from "../utils/sanity"; 
+import { urlFor } from "../utils/image";
+
+// Abrufen der Footer-Daten
+const footerData = await getFooter();
+const footer = footerData[0]; 
+---
+
+<div class="h-fit lg:h-[69px] bg-[#DFDBCB]">
+<div class="max-w-screen-lg grid mx-auto place-items-center h-full">
+   <div class="flex flex-col md:flex-row justify-between lg:items-center p-5 lg:p-0 w-full h-full">
+    <p class="font-light">© 2025 GOBERT DAS MODEHAUS</p>
+    <div class="wrapper flex gap-10 text-light">
+        <a href="" class="font-light">Impressum</a>
+        <a href="" class="font-light">Datenschutz</a>
+    </div>
+   </div>
+</div>
+</div>
+
+<style>
+    a, p {
+        color: #E74011;
+        font-size: 18px;
+    }
+
+
+</style>

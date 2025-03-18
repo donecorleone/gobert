@@ -1,0 +1,168 @@
+.btn {
+  @apply w-[235] bg-[#E74011] text-white px-[50px] py-[10px] text-[14px] uppercase;
+}
+
+.btn-social {
+  @apply w-fit bg-[#E74011] text-white px-[25px] py-[10px] text-[14px] uppercase;
+}
+
+.btn {
+  border-radius: 0px 15px 15px 15px;
+  letter-spacing: 1px;
+}
+
+.btn-social {
+  border-radius: 0px 15px 15px 15px;
+  letter-spacing: 1px;
+}
+.banner {
+  @apply flex flex-col w-[114px] h-[222px] bg-[#B8DAC2] text-[#E74011] text-[16px];
+}
+
+.banner-reverse {
+  @apply flex flex-col-reverse w-[114px] h-[222px] bg-[#B8DAC2] text-[#E74011] text-[16px];
+}
+
+@font-face {
+  font-family: "FilsonPro";
+  src: url("/fonts/FilsonProThin.otf");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FilsonPro";
+  src: url("/fonts/FilsonProThinItalic.otf");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FilsonPro";
+  src: url("/fonts/FilsonProLight.otf");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FilsonPro";
+  src: url("/fonts/FilsonProLightItalic.otf");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FilsonPro";
+  src: url("/fonts/FilsonProBook.otf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FilsonPro";
+  src: url("/fonts/FilsonProBookItalic.otf");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FilsonPro";
+  src: url("/fonts/FilsonProRegular.otf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FilsonPro";
+  src: url("/fonts/FilsonProRegularItalic.otf");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FilsonPro";
+  src: url("/fonts/FilsonProMedium.otf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FilsonPro";
+  src: url("/fonts/FilsonProMediumItalic.otf");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FilsonPro";
+  src: url("/fonts/FilsonProSemibold.otf");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FilsonPro";
+  src: url("/fonts/FilsonProSemiboldItalic.otf");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FilsonPro";
+  src: url("/fonts/FilsonProBold.otf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FilsonPro";
+  src: url("/fonts/FilsonProBoldItalic.otf");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FilsonPro";
+  src: url("/fonts/FilsonProHeavy.otf");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FilsonPro";
+  src: url("/fonts/FilsonProHeavyItalic.otf");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FilsonPro";
+  src: url("/fonts/FilsonProBlack.otf");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FilsonPro";
+  src: url("/fonts/FilsonProBlackItalic.otf");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
